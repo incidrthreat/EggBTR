@@ -1,0 +1,23 @@
+{
+	"items": [
+                "N82E16814487518",
+                "N82E16814137597"
+	],
+        "email": {
+                "receiver": {
+                        "address": [
+				"email.com"
+                        ]
+                },
+                "sender": {
+                        "address": "email@gmail.com",
+                        "password": "PASSWORD"
+                }
+        },
+	"limits": {
+		"price": {
+			"min": 8,
+			"max": 2000
+		}
+	}
+}

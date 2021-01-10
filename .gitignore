@@ -1,0 +1,4 @@
+config.json
+.github/*
+Makefile
+README.md
