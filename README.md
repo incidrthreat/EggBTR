@@ -6,12 +6,12 @@ Newegg's auto-notify feature is not available for every product, especially thos
 
 ## How to schedule (cron.d) on Linux to run every 5 min.
 ```
-*/5 * * * * cd /home/<username>/work/src/github.com/incidrthreat/EggBTR && ./EggBTR >> EggBTR.log 2>&1
+*/5 * * * * cd /home/<username>/work/src/github.com/incidrthreat/EggBTR && ./EggBTR-linux-amd64 >> EggBTR.log 2>&1
 ```
 
 ## How to schedule (schtasks) on Windows to run every 5 min.
 ```
-schtasks /create /sc minute /mo 5 /tn "EggBTR Inventory Check" /tr <systemroot>\Users\<username>\Desktop\EggBTR.exe
+schtasks /create /sc minute /mo 5 /tn "EggBTR Inventory Check" /tr <systemroot>\Users\<username>\Desktop\EggBTR-windows-amd64.exe
 ```
 
 *Note: Modify paths to point to your cloned repository*
