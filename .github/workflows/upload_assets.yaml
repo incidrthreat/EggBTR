@@ -19,7 +19,7 @@ jobs:
           echo "GO111MODULE=on" >> $GITHUB_ENV
           GOOS=windows GOARCH=amd64 go build -o bin/EggBTR-windows-amd64.exe
           GOOS=linux   GOARCH=amd64 go build -o bin/EggBTR-linux-amd64
-          GOOS=darwin  GOARCH=amd64 go build -o bin/EggBTR-macos-amd64
+          GOOS=darwin  GOARCH=amd64 go build -o bin/ci-test-macos-amd64
       - name: upload artifacts
         uses: actions/upload-artifact@master
         with:
@@ -53,7 +53,7 @@ jobs:
           mkdir assets
           zip assets/EggBTR-${SOURCE_TAG}-windows-amd64.zip bin/EggBTR-windows-amd64.exe README.md
           zip assets/EggBTR-${SOURCE_TAG}-linux-amd64.zip bin/EggBTR-linux-amd64 README.md
-          zip assets/EggBTR-${SOURCE_TAG}-darwin-amd64.zip bin/EggBTR-darwin-amd64 README.md
+          zip assets/ci-test-${SOURCE_TAG}-darwin-amd64.zip bin/ci-test-darwin-amd64 README.md
           sha256sum assets/*zip > assets/SHASUMS256.txt
       - name: Upload release assets
         uses: skx/github-action-publish-binaries@master
